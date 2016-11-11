@@ -9,7 +9,7 @@ public class MultiThread {
 	public static void main(String[] args) throws Exception
 	
 	{
-		String st = ("qsub " + "java -jar " + factorizeWorker.FactorizeWorker)
+		String st = ("qsub " + "java -jar " + factorizeWorker.FactorizeWorker);
 		
 		BufferedWriter writer = new BufferedWriter(st);
 		
