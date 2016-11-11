@@ -9,12 +9,15 @@ public class MultiThread {
 	public static void main(String[] args) throws Exception
 	
 	{
-		String st = ("qsub " + "java -jar " + factorizeWorker.FactorizeWorker);
+		try(output = new BufferedOutputStream(new String))
+		{
+					
+			out.write.("qsub " + "java -jar " + factorizeWorker.FactorizeWorker);
+		}
 		
-		BufferedWriter writer = new BufferedWriter(st);
-		
-		writer.flush();	writer.close();
-			
-		
+		catch( IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
