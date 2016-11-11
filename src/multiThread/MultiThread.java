@@ -1,15 +1,17 @@
 package multiThread;
 
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 public class MultiThread {
 		
 	public static void main(String[] args) throws Exception
+	
 	{
-		 	
-		BufferedWriter writer = new BufferedWriter(null);
-			
-		writer.write("java -jar /users/cvettrai/rdp_classifier_2.12/dist/classifier.jar" + "-o \"" + "factorizeWorker.FactorizeWorker" + "\"\n");
+		String st = ("qsub " + "java -jar " + factorizeWorker.FactorizeWorker)
+		
+		BufferedWriter writer = new BufferedWriter(st);
 		
 		writer.flush();	writer.close();
 			
